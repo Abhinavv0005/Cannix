@@ -3,33 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - thesolivra.com</title>
+    <title>Terms of Service - AUM</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Righteous&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Outfit', sans-serif; margin: 0; padding: 0; background-color: #09090b; color: #f8fafc; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        .site-header { background-color: rgba(9, 9, 11, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 30px; display: flex; justify-content: center; position: sticky; top: 0; z-index: 100; }
-        .logo { font-family: 'Righteous', cursive; font-size: 26px; text-decoration: none; text-transform: uppercase; background: linear-gradient(to right, #00f2fe, #4facfe, #00f2fe); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .notification-bar { background-color: #fbbf24; color: #000000; height: 38px; line-height: 38px; overflow: hidden; white-space: nowrap; font-size: clamp(12px, 2vw, 14px); font-weight: 900; letter-spacing: 1px; display: block; border-bottom: 2px solid #000; position: sticky; top: 0; z-index: 102; box-sizing: border-box; }
+        .ticker-text { display: inline-block; padding-left: 100%; animation: marquee 15s linear infinite; vertical-align: top; }
+        @keyframes marquee { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+        .site-header { background-color: rgba(9, 9, 11, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: clamp(12px, 2vw, 20px) clamp(20px, 5vw, 40px); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 38px; z-index: 100; }
+        .brand-container { display: flex; flex-direction: column; }
+        .logo { font-family: 'Righteous', cursive; font-size: clamp(22px, 4.5vw, 32px); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; background: linear-gradient(to right, #00f2fe, #4facfe, #00f2fe); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradientText 3s linear infinite; line-height: 1; margin-bottom: 2px;}
+        .tagline { font-size: clamp(8px, 1.5vw, 10px); color: #a1a1aa; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;}
+        @keyframes gradientText { to { background-position: 200% center; } }
+        
+        .contact-support-icon { display: flex; align-items: center; justify-content: center; width: clamp(35px, 5vw, 45px); height: clamp(35px, 5vw, 45px); background: rgba(37, 211, 102, 0.1); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 50%; transition: all 0.3s ease; text-decoration: none; }
+        .contact-support-icon:hover { background: rgba(37, 211, 102, 0.25); transform: scale(1.1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
+        .contact-support-icon svg { width: clamp(18px, 3vw, 22px); height: clamp(18px, 3vw, 22px); fill: #25D366; transition: transform 0.3s ease; }
+
         .content-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
         .back-link { display: inline-block; margin-bottom: 20px; color: #34d399; font-weight: 600; text-decoration: none; }
         .back-link:hover { text-decoration: underline; }
-        .policy-card { background: #18181b; padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
-        h1 { text-align: center; font-size: 32px; font-weight: 800; margin-top: 0; }
-        h2 { font-size: 22px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-top: 30px; }
+        .policy-card { background: #18181b; padding: clamp(20px, 5vw, 40px); border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        h1 { text-align: center; font-size: clamp(24px, 4vw, 32px); font-weight: 800; margin-top: 0; color: #fff;}
+        h2 { font-size: clamp(18px, 3vw, 22px); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-top: 30px; color: #fff; }
         p, ul { color: #a1a1aa; font-size: 15px; font-weight: 300; }
         li { margin-bottom: 8px; }
         a { color: #34d399; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .site-footer { background-color: #000; color: #71717a; text-align: center; padding: 40px 20px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); }
-        .site-footer p { margin: 5px 0; font-size: 14px; }
-        .footer-links { margin-top: 20px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .footer-links a { color: #a1a1aa; font-size: 13px; font-weight: 600; }
+        
+        .site-footer { background-color: #000; color: #71717a; text-align: center; padding: clamp(30px, 5vw, 50px) 20px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .site-footer p { margin: 5px 0; font-size: clamp(12px, 2vw, 14px); }
+        .footer-links { margin-top: 20px; display: flex; justify-content: center; gap: clamp(10px, 3vw, 30px); flex-wrap: wrap; }
+        .footer-links a { color: #a1a1aa; font-size: clamp(11px, 2vw, 13px); font-weight: 600; text-decoration: none; transition: color 0.2s;}
         .footer-links a:hover { color: #fff; }
     </style>
 </head>
 <body>
 
+<div class="notification-bar">
+    <div class="ticker-text">
+        🔥 HYPE DROP: GET 10% OFF ALL PREPAID ORDERS! ⚡ FREE SHIPPING OVER ₹1699 🚀 SALE ENDS SOON! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔥 HYPE DROP: GET 10% OFF ALL PREPAID ORDERS! ⚡ FREE SHIPPING OVER ₹1699 🚀 SALE ENDS SOON!
+    </div>
+</div>
+
 <header class="site-header">
-    <a href="/" class="logo">thesolivra.com</a>
+    <div class="brand-container">
+        <a href="/" class="logo">AUM</a>
+        <span class="tagline">AYUSH MEDICAL</span>
+    </div>
+    <a href="https://wa.me/919876543210?text=Hello%2C%20I%20need%20some%20help%20with%20your%20store." target="_blank" class="contact-support-icon" title="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.1 0-65.5-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7.1c-18.4-29.6-28.1-63.9-28.1-98.8 0-103.7 84.4-188.1 188.3-188.1 50.3 0 97.5 19.6 133.1 55.2 35.6 35.6 55.2 82.8 55.2 133.1 0 103.7-84.4 188.2-188.4 188.2zM327 302.3c-5.6-2.8-33.4-16.5-38.6-18.4-5.2-1.9-9-.2-12.8 5.6-3.8 5.7-14.7 18.4-18 22.2-3.3 3.8-6.6 4.3-12.2 1.4-5.6-2.8-23.8-8.8-45.3-27.9-16.7-14.9-28-33.3-31.3-39-3.3-5.7-.4-8.8 2.5-11.6 2.6-2.6 5.6-6.6 8.5-9.9 2.8-3.3 3.8-5.7 5.7-9.5 1.9-3.8.9-7.1-.5-9.9-1.4-2.8-12.8-30.9-17.5-42.3-4.6-11.2-9.2-9.7-12.8-9.9-3.3-.2-7.1-.2-10.9-.2-3.8 0-9.9 1.4-15.1 7.1-5.2 5.7-20.8 20.3-20.8 49.7s21.3 57.7 24.3 61.8c2.8 3.8 42.1 64.3 102 90.1 14.3 6.2 25.4 9.9 34.1 12.7 14.4 4.6 27.5 3.9 37.9 2.4 11.6-1.7 33.4-13.7 38.1-26.9 4.7-13.2 4.7-24.5 3.3-26.9-1.4-2.4-5.2-3.8-10.8-6.6z"/>
+        </svg>
+    </a>
 </header>
 
 <div class="content-container">
@@ -37,25 +65,25 @@
     
     <div class="policy-card">
         <h1>Terms of Service</h1>
-        <p><strong>thesolivra.com</strong> (“www.thesolivra.com”) owns and operates this Website. This document governs your relationship with www.thesolivra.com (“Website”). Access to and use of this website and the products and services available through this website (collectively, the “Services”) are subject to the following terms, conditions, and notices. By using the Services, you are agreeing to all of the Terms of Service, as may be updated by us from time to time. You should check this page regularly to take notice of any changes we may have made to the Terms of Service.</p>
+        <p><strong>AUM</strong> owns and operates this Website. This document governs your relationship with our Website. Access to and use of this website and the products and services available through this website (collectively, the “Services”) are subject to the following terms, conditions, and notices. By using the Services, you are agreeing to all of the Terms of Service, as may be updated by us from time to time. You should check this page regularly to take notice of any changes we may have made to the Terms of Service.</p>
 
         <h2>Access to this Site</h2>
-        <p>Access to this website is permitted on a temporary basis and you must be up (21 years of age), and we reserve the right to withdraw or amend the services without notice. We will not be liable if for any reason this Website is unavailable at any time or for any period. From time to time, we may restrict access to some parts or all of this Website. This Website may contain links to other websites (the “Linked Sites”), which are not operated by thesolivra. Therefore, we have no control over the Linked Sites and accept no responsibility for them or for any loss or damage that may arise from your use of them. Your use of the Linked Sites will be subject to the terms of use and service contained within each such site.</p>
+        <p>Access to this website is permitted on a temporary basis and you must be up (21 years of age), and we reserve the right to withdraw or amend the services without notice. We will not be liable if for any reason this Website is unavailable at any time or for any period. From time to time, we may restrict access to some parts or all of this Website. This Website may contain links to other websites (the “Linked Sites”), which are not operated by AUM. Therefore, we have no control over the Linked Sites and accept no responsibility for them or for any loss or damage that may arise from your use of them. Your use of the Linked Sites will be subject to the terms of use and service contained within each such site.</p>
 
         <h2>Privacy Policy</h2>
-        <p>Our privacy policy, which sets out how we will use your information, can be found at <a href="/privacy.html">www.thesolivra.com/privacy.html</a>. By using this Website, you consent to the processing described therein and warrant that all data provided by you is accurate.</p>
+        <p>Our privacy policy, which sets out how we will use your information, can be found at <a href="/privacy.html">Privacy Policy</a>. By using this Website, you consent to the processing described therein and warrant that all data provided by you is accurate.</p>
 
         <h2>Prohibitions</h2>
-        <p>You must not misuse this website. You will not: commit or encourage a criminal offense; transmit or distribute a virus, Trojan, worm, logic bomb or any other material which is malicious, technologically harmful, in breach of confidence or in any way offensive or obscene; hack into any aspect of the Service; corrupt data; cause annoyance to other users; infringe upon the rights of any other person's proprietary rights; send any unsolicited advertising or promotional material, commonly referred to as "spam"; or attempt to affect the performance or functionality of any computer facilities of or accessed through this Website. Breaching this provision would constitute a criminal offense, and thesolivra.com will report any such breach to the relevant law enforcement authorities and disclose your identity to them. We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses, or other technologically harmful material that may infect your computer equipment, computer programs, data, or other proprietary material due to your use of this website or to your downloading of any material posted on it, or on any website linked to it.</p>
+        <p>You must not misuse this website. You will not: commit or encourage a criminal offense; transmit or distribute a virus, Trojan, worm, logic bomb or any other material which is malicious, technologically harmful, in breach of confidence or in any way offensive or obscene; hack into any aspect of the Service; corrupt data; cause annoyance to other users; infringe upon the rights of any other person's proprietary rights; send any unsolicited advertising or promotional material, commonly referred to as "spam"; or attempt to affect the performance or functionality of any computer facilities of or accessed through this Website. Breaching this provision would constitute a criminal offense, and we will report any such breach to the relevant law enforcement authorities and disclose your identity to them. We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses, or other technologically harmful material that may infect your computer equipment, computer programs, data, or other proprietary material due to your use of this website or to your downloading of any material posted on it, or on any website linked to it.</p>
 
         <h2>Intellectual Property, Software, and Content</h2>
-        <p>The intellectual property rights in all software and content (including photographic images) made available to you on or through this Website remain the property of www.thesolivra.com or its licensors and are protected by copyright laws and treaties around the world. All such rights are reserved by www.thesolivra.com and its licensors. You may store, print, and display the content supplied solely for your own personal use. You are not permitted to publish, manipulate, distribute, or otherwise reproduce, in any format, any of the content or copies of the content supplied to you or which appears on this Website nor may you use any such content in connection with any business or commercial enterprise.</p>
+        <p>The intellectual property rights in all software and content (including photographic images) made available to you on or through this Website remain the property of AUM or its licensors and are protected by copyright laws and treaties around the world. All such rights are reserved. You may store, print, and display the content supplied solely for your own personal use. You are not permitted to publish, manipulate, distribute, or otherwise reproduce, in any format, any of the content or copies of the content supplied to you or which appears on this Website nor may you use any such content in connection with any business or commercial enterprise.</p>
 
         <h2>Terms of Sale</h2>
-        <p>By placing an order, you are offering to purchase a product on and subject to the following terms and conditions. All orders are subject to availability and confirmation of the order price. Dispatch times may vary according to availability and subject to any delays resulting from postal delays or force majeure for which we will not be responsible. In order to contract with www.thesolivra.com, you must be over 18 years of age and possess a valid credit or debit card issued by a bank acceptable to us. www.thesolivra.com retains the right to refuse any request made by you. If your order is accepted, we will inform you by email and we will confirm the identity of the party which you have contracted with. This will usually be www.thesolivra.com or may in some cases be a third party. Where a contract is made with a third party, www.thesolivra.com is not acting as either agent or principal and the contract is made between yourself and that third party and will be subject to the terms of sale which they supply you. When placing an order you undertake that all details you provide to us are true and accurate, that you are an authorized user of the credit or debit card used to place your order and that there are sufficient funds to cover the cost of the goods. The cost of foreign products and services may fluctuate. All prices advertised are subject to such changes.</p>
+        <p>By placing an order, you are offering to purchase a product on and subject to the following terms and conditions. All orders are subject to availability and confirmation of the order price. Dispatch times may vary according to availability and subject to any delays resulting from postal delays or force majeure for which we will not be responsible. In order to contract with us, you must be over 18 years of age and possess a valid credit or debit card issued by a bank acceptable to us. We retain the right to refuse any request made by you. If your order is accepted, we will inform you by email and we will confirm the identity of the party which you have contracted with. When placing an order you undertake that all details you provide to us are true and accurate, that you are an authorized user of the credit or debit card used to place your order and that there are sufficient funds to cover the cost of the goods. The cost of foreign products and services may fluctuate. All prices advertised are subject to such changes.</p>
 
         <h2>Refunds and Returns</h2>
-        <p>Any and all opened Goods are not eligible for refund or return. If you have an unopened sealed package you would like to return, you can contact us for return options. All purchases of 30 days or longer from time of purchase are final and not eligible for refund. Refunds can take 7 days or more to process or post to your account. Weekends and holidays may affect this time and cause more delays. Please contact us first if you are unsatisfied at <a href="mailto:info@thesolivra.com">info@thesolivra.com</a>, as we will do everything possible to make you a happy and repeated customer.</p>
+        <p>Any and all opened Goods are not eligible for refund or return. If you have an unopened sealed package you would like to return, you can contact us for return options. All purchases of 30 days or longer from time of purchase are final and not eligible for refund. Refunds can take 7 days or more to process or post to your account. Weekends and holidays may affect this time and cause more delays. Please contact us first if you are unsatisfied, as we will do everything possible to make you a happy and repeated customer.</p>
 
         <h2>Our Contract</h2>
         <p>When you place an order, you will receive an acknowledgment email confirming receipt of your order: this email will only be an acknowledgment and will not constitute acceptance of your order. A contract between us will not be formed until we send you confirmation by email that the goods which you ordered have been dispatched to you. Only those goods listed in the confirmation email sent at the time of dispatch will be included in the contract formed.</p>
@@ -69,12 +97,12 @@
 </div>
 
 <footer class="site-footer">
-    <p>&copy; 2026 thesolivra.com. STAY PLUGGED IN.</p>
+    <p>&copy; 2026 AUM. STAY PLUGGED IN.</p>
     <p>Secure ordering. Fast delivery.</p>
     <div class="footer-links">
-        <a href="/privacy.html">PRIVACY</a>
-        <a href="/terms.html">TERMS</a>
-        <a href="/refund.html">RETURNS</a>
+        <a href="https://cannix.pages.dev//privacy.html">PRIVACY</a>
+        <a href="https://cannix.pages.dev//terms.html">TERMS</a>
+        <a href="https://cannix.pages.dev//refund.html">RETURNS</a>
     </div>
 </footer>
 
