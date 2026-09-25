@@ -136,7 +136,7 @@ export default function App() {
                     <a href="/#shop">Shop</a>
                     <a href="/about.html">About us</a>
                     <a href="/contact.html">Contact us</a>
-                    <a href="/#join">Join us</a>
+                    <a href="/join.html">Join us</a>
                 </nav>
 
                 <a href={headerWhatsappUrl} target="_blank" rel="noreferrer" className="contact-support-icon" title="Chat with us on WhatsApp">
