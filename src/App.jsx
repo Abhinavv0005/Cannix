@@ -134,8 +134,8 @@ export default function App() {
                 <nav className="header-nav">
                     <a href="/">Home</a>
                     <a href="/#shop">Shop</a>
-                    <a href="/#about">About us</a>
-                    <a href="/#contact">Contact us</a>
+                    <a href="/about.html">About us</a>
+                    <a href="/contact.html">Contact us</a>
                     <a href="/#join">Join us</a>
                 </nav>
 
