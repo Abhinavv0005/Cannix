@@ -126,9 +126,19 @@ export default function App() {
 
             <header className="site-header">
                 <div className="brand-container">
-                    <a href="#" className="logo">{STORE_NAME}</a>
+                    <a href="/" className="logo">{STORE_NAME}</a>
                     <span className="tagline">{STORE_TAGLINE}</span>
                 </div>
+                
+                {/* NEW NAVIGATION MENU */}
+                <nav className="header-nav">
+                    <a href="/">Home</a>
+                    <a href="/#shop">Shop</a>
+                    <a href="/#about">About us</a>
+                    <a href="/#contact">Contact us</a>
+                    <a href="/#join">Join us</a>
+                </nav>
+
                 <a href={headerWhatsappUrl} target="_blank" rel="noreferrer" className="contact-support-icon" title="Chat with us on WhatsApp">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.1 0-65.5-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7.1c-18.4-29.6-28.1-63.9-28.1-98.8 0-103.7 84.4-188.1 188.3-188.1 50.3 0 97.5 19.6 133.1 55.2 35.6 35.6 55.2 82.8 55.2 133.1 0 103.7-84.4 188.2-188.4 188.2zM327 302.3c-5.6-2.8-33.4-16.5-38.6-18.4-5.2-1.9-9-.2-12.8 5.6-3.8 5.7-14.7 18.4-18 22.2-3.3 3.8-6.6 4.3-12.2 1.4-5.6-2.8-23.8-8.8-45.3-27.9-16.7-14.9-28-33.3-31.3-39-3.3-5.7-.4-8.8 2.5-11.6 2.6-2.6 5.6-6.6 8.5-9.9 2.8-3.3 3.8-5.7 5.7-9.5 1.9-3.8.9-7.1-.5-9.9-1.4-2.8-12.8-30.9-17.5-42.3-4.6-11.2-9.2-9.7-12.8-9.9-3.3-.2-7.1-.2-10.9-.2-3.8 0-9.9 1.4-15.1 7.1-5.2 5.7-20.8 20.3-20.8 49.7s21.3 57.7 24.3 61.8c2.8 3.8 42.1 64.3 102 90.1 14.3 6.2 25.4 9.9 34.1 12.7 14.4 4.6 27.5 3.9 37.9 2.4 11.6-1.7 33.4-13.7 38.1-26.9 4.7-13.2 4.7-24.5 3.3-26.9-1.4-2.4-5.2-3.8-10.8-6.6z"/>
@@ -141,7 +151,8 @@ export default function App() {
                 <p>Up to 50% Off on top electronics and premium accessories. Limited stock. Cop the best deals before they are gone forever.</p>
             </div>
 
-            <h2 className="section-title">Trending Now</h2>
+            {/* Added id="shop" so the Shop link scrolls here */}
+            <h2 id="shop" className="section-title">Trending Now</h2>
 
             <div className="products-grid">
                 {products.map((product, index) => {
@@ -185,9 +196,9 @@ export default function App() {
                 <p>&copy; {new Date().getFullYear()} {STORE_NAME}. STAY PLUGGED IN.</p>
                 <p>Secure ordering. Fast delivery.</p>
                 <div className="footer-links">
-                    <a href="//cannix.pages.dev/privacy.html">PRIVACY</a>
-                    <a href="//cannix.pages.dev/terms.html">TERMS</a>
-                    <a href="//cannix.pages.dev/refund.html">RETURNS</a>
+                    <a href="https://cannix.pages.dev//privacy.html">PRIVACY</a>
+                    <a href="https://cannix.pages.dev//terms.html">TERMS</a>
+                    <a href="https://cannix.pages.dev//refund.html">RETURNS</a>
                 </div>
             </footer>
 
