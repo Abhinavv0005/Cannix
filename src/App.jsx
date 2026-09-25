@@ -185,9 +185,9 @@ export default function App() {
                 <p>&copy; {new Date().getFullYear()} {STORE_NAME}. STAY PLUGGED IN.</p>
                 <p>Secure ordering. Fast delivery.</p>
                 <div className="footer-links">
-                    <a href="/privacy.html">PRIVACY</a>
-                    <a href="/terms.html">TERMS</a>
-                    <a href="/refund.html">RETURNS</a>
+                    <a href="//privacy.html">PRIVACY</a>
+                    <a href="//terms.html">TERMS</a>
+                    <a href="//refund.html">RETURNS</a>
                 </div>
             </footer>
 
