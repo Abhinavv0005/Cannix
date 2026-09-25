@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AUM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Righteous&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; margin: 0; padding: 0; background-color: #09090b; color: #f8fafc; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        
+        /* Notification Bar */
+        .notification-bar { background-color: #fbbf24; color: #000000; height: 38px; line-height: 38px; overflow: hidden; white-space: nowrap; font-size: clamp(12px, 2vw, 14px); font-weight: 900; letter-spacing: 1px; display: block; border-bottom: 2px solid #000; position: sticky; top: 0; z-index: 102; box-sizing: border-box; }
+        .ticker-text { display: inline-block; padding-left: 100%; animation: marquee 15s linear infinite; vertical-align: top; }
+        @keyframes marquee { 0% { transform: translate3d(0, 0, 0); } 100% { transform: translate3d(-100%, 0, 0); } }
+
+        /* Header & Nav */
+        .site-header { background-color: rgba(9, 9, 11, 0.7); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: clamp(12px, 2vw, 20px) clamp(20px, 5vw, 40px); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 38px; z-index: 100; flex-wrap: wrap; }
+        .brand-container { display: flex; flex-direction: column; }
+        .logo { font-family: 'Righteous', cursive; font-size: clamp(22px, 4.5vw, 32px); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; background: linear-gradient(to right, #00f2fe, #4facfe, #00f2fe); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradientText 3s linear infinite; line-height: 1; margin-bottom: 2px;}
+        .tagline { font-size: clamp(8px, 1.5vw, 10px); color: #a1a1aa; letter-spacing: 2px; text-transform: uppercase; font-weight: 600;}
+        @keyframes gradientText { to { background-position: 200% center; } }
+        
+        .header-nav { display: flex; gap: clamp(12px, 2vw, 25px); align-items: center; }
+        .header-nav a { color: #f8fafc; text-decoration: none; font-size: clamp(12px, 1.5vw, 14px); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
+        .header-nav a:hover { color: #34d399; }
+
+        @media (max-width: 768px) {
+            .header-nav { order: 3; width: 100%; justify-content: center; margin-top: 15px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05); gap: 12px; flex-wrap: wrap; }
+        }
+        
+        /* WhatsApp Icon */
+        .contact-support-icon { display: flex; align-items: center; justify-content: center; width: clamp(35px, 5vw, 45px); height: clamp(35px, 5vw, 45px); background: rgba(37, 211, 102, 0.1); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 50%; transition: all 0.3s ease; text-decoration: none; }
+        .contact-support-icon:hover { background: rgba(37, 211, 102, 0.25); transform: scale(1.1); box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
+        .contact-support-icon svg { width: clamp(18px, 3vw, 22px); height: clamp(18px, 3vw, 22px); fill: #25D366; transition: transform 0.3s ease; }
+
+        /* Content */
+        .content-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #34d399; font-weight: 600; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        .policy-card { background: #18181b; padding: clamp(20px, 5vw, 40px); border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        h1 { text-align: center; font-size: clamp(24px, 4vw, 32px); font-weight: 800; margin-top: 0; color: #fff;}
+        h2 { font-size: clamp(18px, 3vw, 22px); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-top: 35px; color: #fff; }
+        h3 { font-size: 18px; margin-top: 20px; color: #fff; }
+        p, ul { color: #a1a1aa; font-size: 16px; font-weight: 300; line-height: 1.7; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+        strong { color: #f8fafc; font-weight: 600; }
+        a { color: #34d399; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* Footer */
+        .site-footer { background-color: #000; color: #71717a; text-align: center; padding: clamp(30px, 5vw, 50px) 20px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .site-footer p { margin: 5px 0; font-size: clamp(12px, 2vw, 14px); }
+        .footer-links { margin-top: 20px; display: flex; justify-content: center; gap: clamp(10px, 3vw, 30px); flex-wrap: wrap; }
+        .footer-links a { color: #a1a1aa; font-size: clamp(11px, 2vw, 13px); font-weight: 600; text-decoration: none; transition: color 0.2s;}
+        .footer-links a:hover { color: #fff; }
+    </style>
+</head>
+<body>
+
+<div class="notification-bar">
+    <div class="ticker-text">
+        🔥 HYPE DROP: GET 10% OFF ALL PREPAID ORDERS! ⚡ FREE SHIPPING OVER ₹1699 🚀 SALE ENDS SOON! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔥 HYPE DROP: GET 10% OFF ALL PREPAID ORDERS! ⚡ FREE SHIPPING OVER ₹1699 🚀 SALE ENDS SOON!
+    </div>
+</div>
+
+<header class="site-header">
+    <div class="brand-container">
+        <a href="/" class="logo">AUM</a>
+        <span class="tagline">AYUSH MEDICAL</span>
+    </div>
+    
+    <nav class="header-nav">
+        <a href="/">Home</a>
+        <a href="/#shop">Shop</a>
+        <a href="/about.html">About us</a>
+        <a href="/#contact">Contact us</a>
+        <a href="/#join">Join us</a>
+    </nav>
+
+    <a href="https://wa.me/919876543210?text=Hello%2C%20I%20need%20some%20help%20with%20your%20store." target="_blank" class="contact-support-icon" title="Chat with us on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 413.6c-33.1 0-65.5-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.1l-4.4-7.1c-18.4-29.6-28.1-63.9-28.1-98.8 0-103.7 84.4-188.1 188.3-188.1 50.3 0 97.5 19.6 133.1 55.2 35.6 35.6 55.2 82.8 55.2 133.1 0 103.7-84.4 188.2-188.4 188.2zM327 302.3c-5.6-2.8-33.4-16.5-38.6-18.4-5.2-1.9-9-.2-12.8 5.6-3.8 5.7-14.7 18.4-18 22.2-3.3 3.8-6.6 4.3-12.2 1.4-5.6-2.8-23.8-8.8-45.3-27.9-16.7-14.9-28-33.3-31.3-39-3.3-5.7-.4-8.8 2.5-11.6 2.6-2.6 5.6-6.6 8.5-9.9 2.8-3.3 3.8-5.7 5.7-9.5 1.9-3.8.9-7.1-.5-9.9-1.4-2.8-12.8-30.9-17.5-42.3-4.6-11.2-9.2-9.7-12.8-9.9-3.3-.2-7.1-.2-10.9-.2-3.8 0-9.9 1.4-15.1 7.1-5.2 5.7-20.8 20.3-20.8 49.7s21.3 57.7 24.3 61.8c2.8 3.8 42.1 64.3 102 90.1 14.3 6.2 25.4 9.9 34.1 12.7 14.4 4.6 27.5 3.9 37.9 2.4 11.6-1.7 33.4-13.7 38.1-26.9 4.7-13.2 4.7-24.5 3.3-26.9-1.4-2.4-5.2-3.8-10.8-6.6z"/>
+        </svg>
+    </a>
+</header>
+
+<div class="content-container">
+    <a href="/" class="back-link">← Back to Store</a>
+    
+    <div class="policy-card">
+        <h1>Welcome to Hebe Wellness</h1>
+        <p>At Hebe Wellness, we believe in the boundless potential of nature to enhance well-being and vitality. Our mission is to bring you the finest, purest, and most natural CBD and THC products, helping you achieve a healthier, more balanced life. With a deep respect for ancient wisdom and modern science, we’re committed to harnessing the transformative benefits of cannabis to support your journey to holistic wellness.</p>
+
+        <h2>The Meaning Behind Hebe</h2>
+        <p>Hebe, the Greek goddess of youth, embodies vitality, rejuvenation, and eternal energy. Just as Hebe served the gods with her divine ambrosia, we offer you nature’s elixir of life through our meticulously crafted CBD products. Our name reflects our promise to bring youthfulness, energy, and wellness into your life, naturally.</p>
+
+        <h2>The Legacy of Cannabis and Hemp</h2>
+        <p>The story of cannabis and hemp is as old as civilization itself. Revered for its incredible versatility, hemp has been used for over 10,000 years, making it one of humanity's oldest cultivated plants. In India, references to cannabis appear in ancient texts like the <em>Rigveda</em>, where it is described as a sacred plant, and in <em>Ayurveda</em>, where it is praised for its healing properties.</p>
+        <p>Hemp has served countless purposes throughout history:</p>
+        <ul>
+            <li><strong>Fabric and Rope:</strong> Used by ancient civilizations to create durable textiles and ropes.</li>
+            <li><strong>Food Source:</strong> Rich in nutrients, hemp seeds were consumed for sustenance.</li>
+            <li><strong>Medicinal Benefits:</strong> Documented in ancient Chinese, Egyptian, and Indian texts for treating pain, inflammation, and other ailments.</li>
+        </ul>
+        <p>Today, hemp is recognized as one of the most sustainable plants on the planet. It requires minimal water, enriches the soil, and absorbs more carbon dioxide than most other plants, making it a crucial ally in combating climate change.</p>
+
+        <h2>India’s Evolving Relationship with Hemp</h2>
+        <p>In a historic move, the Indian government and the Ministry of AYUSH are progressively acknowledging the medicinal value of hemp. Recently, cannabis was reclassified from a Schedule 1 drug under NDPS to a prescription-based treatment, paving the way for its responsible use in wellness. This marks a significant step in rediscovering hemp's potential, blending ancient traditions with modern health solutions.</p>
+
+        <h2>Our Journey</h2>
+        <p>Hebe Wellness was born from a simple realization: nature holds the key to true wellness. Inspired by the profound healing properties of plants, we embarked on a mission to craft premium CBD products that honor the purity and power of nature.</p>
+        <p>We partner with organic farms to source the highest-quality hemp, ensuring every drop of our CBD oil is free from pesticides, herbicides, and synthetic additives. Our state-of-the-art extraction process preserves the full spectrum of cannabinoids, terpenes, and flavonoids, delivering the complete benefits of the hemp plant in every bottle.</p>
+
+        <h2>Understanding CBD and THC</h2>
+        <p>CBD (Cannabidiol) and THC (Tetrahydrocannabinol) are two primary compounds found in cannabis. Together, they interact with the body’s endocannabinoid system, which regulates mood, sleep, pain, and immunity.</p>
+        <ul>
+            <li><strong>CBD:</strong> Non-psychoactive, known for reducing anxiety, promoting restful sleep, and relieving pain and inflammation.</li>
+            <li><strong>THC:</strong> Offers pain relief, appetite stimulation, and relaxation, when used responsibly.</li>
+        </ul>
+        <p>At Hebe Wellness, we embrace the synergistic benefits of these compounds to provide holistic solutions tailored to your needs.</p>
+
+        <h2>Our Commitment to Sustainability and Purity</h2>
+        <p>Hebe Wellness is deeply committed to sustainability and purity in every aspect of our process:</p>
+        <ul>
+            <li><strong>Ethically Sourced Hemp:</strong> We support sustainable farming practices that protect the environment and promote soil health.</li>
+            <li><strong>Rigorous Quality Testing:</strong> Every product undergoes third-party lab testing to ensure potency, purity, and safety.</li>
+            <li><strong>Certified Standards:</strong> Our products are GMP-certified, cruelty-free, Halal, Kosher, and organically certified, meeting global quality benchmarks.</li>
+        </ul>
+
+        <h2>Why Choose Hebe Wellness?</h2>
+        <ul>
+            <li><strong>Pure and Natural:</strong> Our products are free from artificial additives and crafted to deliver the purest form of wellness.</li>
+            <li><strong>Sustainability Focused:</strong> Supporting eco-friendly practices for a greener planet.</li>
+            <li><strong>Full-Spectrum Benefits:</strong> Retaining all beneficial compounds for maximum therapeutic effects.</li>
+            <li><strong>Transparency:</strong> We share lab results, ensuring you trust our products’ efficacy and safety.</li>
+            <li><strong>Educational Resources:</strong> Empowering you with knowledge about CBD and THC to make informed choices.</li>
+        </ul>
+
+        <h2>Join the Hebe Wellness Revolution</h2>
+        <p>Rediscover the ancient power of cannabis with Hebe Wellness. Experience the rejuvenation and balance that Hebe symbolizes through our premium CBD and THC products. Together, let’s embrace the healing power of nature and embark on a journey of vitality, harmony, and well-being.</p>
+        <p style="text-align: center; margin-top: 30px; font-size: 18px; color: #f8fafc;"><em>Your path to natural wellness begins here.</em></p>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <p>&copy; 2026 AUM. STAY PLUGGED IN.</p>
+    <p>Secure ordering. Fast delivery.</p>
+    <div class="footer-links">
+        <a href="https://cannix.pages.dev/privacy.html">PRIVACY</a>
+        <a href="https://cannix.pages.dev/terms.html">TERMS</a>
+        <a href="https://cannix.pages.dev/refund.html">RETURNS</a>
+    </div>
+</footer>
+
+</body>
+</html>
