@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Righteous&display=swap');
 
 /* Base Styling */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Righteous&display=swap');
+
+/* Base Styling */
 body { 
     font-family: 'Outfit', sans-serif; 
     margin: 0; 
@@ -484,15 +487,17 @@ body {
     scroll-snap-type: x mandatory;
     scrollbar-width: none; 
     border-radius: 20px;
-    background: #111;
+    background: transparent;
 }
 .modal-slider::-webkit-scrollbar { display: none; }
 .modal-slider img {
     flex: 0 0 100%;
     scroll-snap-align: center;
     width: 100%; 
-    height: clamp(250px, 40vw, 350px); 
+    height: auto; 
+    max-height: 50vh;
     object-fit: contain;
+    display: block;
 }
 
 .modal-content .product-tag { top: 15px; left: 15px; }
