@@ -4,7 +4,7 @@ import './App.css';
 // ==========================================
 // 1. CONFIGURE YOUR WHATSAPP NUMBER & STORE DETAILS
 // ==========================================
-const WHATSAPP_NUMBER = "919876543210"; 
+const WHATSAPP_NUMBER = "918218886287"; 
 const STORE_NAME = "AUM";
 const STORE_TAGLINE = "AYUSH MEDICAL";
 const NOTIFICATION_TEXT = "🔥 HYPE DROP: GET 10% OFF ALL PREPAID ORDERS! ⚡ FREE SHIPPING OVER ₹1699 🚀 SALE ENDS SOON!";
@@ -16,7 +16,7 @@ const headerWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComp
 // ==========================================
 const rawProducts = [
     {
-        name: " Lift | Full Spectrum Vijaya Gummies | (1:4) 1000 mg per Gummy",
+        name: " Lift | Full Spectrum Vijaya Gummies | (1:4) 600 mg per Gummy",
         price: "₹8,999",
         original_price: "₹10,999",
         tag: "Hot Deal",
@@ -24,10 +24,10 @@ const rawProducts = [
             "https://drive.google.com/file/d/1n6pPJBQgCmSxIOMvRm5doJbTv-Y6Nhm8/view?usp=drive_link",
             // "https://drive.google.com/file/d/1Zh8Qid5cUjceEFHC_wsxRNgaNUZFMso2/view?usp=drive_link"
         ],
-        desc: " Lift -  Full Spectrum Vijaya Gummies are carefully made for people who want a modern, guided, and refined way to be healthy. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
+        desc: " Elevate your everyday wellness routine with Lift, premium Full Spectrum Vijaya Gummies crafted for a smooth, enjoyable experience. Each gummy contains 600 mg of Vijaya extract in a carefully balanced 1:4 formulation, offering a convenient and flavorful way to incorporate Vijaya into your routine. With a delicious gummy format and consistent serving, Lift is designed for those who value quality, simplicity, and mindful moments. Whether you're winding down, enjoying personal time, or simply looking to add something different to your wellness ritual, Lift fits effortlessly into your day. Store in a cool, dry place and use as directed.Lift -  Full Spectrum Vijaya Gummies are carefully made for people who want a modern, guided, and refined way to be healthy. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Buzz | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        name: "Buzz | Full Spectrum Vijaya Gummies | (1:4) 600 mg per Gummy",
         price: "₹8,899",
         original_price: "₹10,999",
         tag: "Sale",
@@ -35,10 +35,10 @@ const rawProducts = [
             "https://drive.google.com/file/d/1tZ3iyvIk-aUQaJg7pe8JXYSeAykrrpFu/view?usp=drive_link",
             // "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "Buzz - Full Spectrum Vijaya Gummies are designed to promote energy and focus. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
+        desc: "Buzz - Full Spectrum VMeet Buzz, premium Full Spectrum Vijaya Gummies crafted for those who enjoy a flavorful and convenient wellness experience. Each gummy contains 600 mg of Vijaya extract in a balanced 1:4 formulation, making it easy to incorporate into your daily routine. With a delicious, easy-to-enjoy format and consistent serving, Buzz is designed for moments when you want to slow down, reconnect, and enjoy your personal time. Whether you're relaxing after a long day or creating a mindful evening ritual, Buzz brings simplicity and enjoyment to your routine. Store in a cool, dry place and use only as directed.ijaya Gummies are designed to promote energy and focus. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Exhale | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        name: "Exhale | Full Spectrum Vijaya Gummies | (1:4) 600 mg per Gummy",
         price: "₹8,999",
         original_price: "₹10,999",
         tag: "Bestseller",
@@ -46,10 +46,10 @@ const rawProducts = [
             "https://drive.google.com/file/d/1ekPtlIBypb4BW1zFZQk26W3Ic2neIgaO/view?usp=drive_link",
             // "https://images.unsplash.com/photo-1628156108159-863a152fb1d0?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "Exhale - Full Spectrum Vijaya Gummies are designed to promote relaxation and reduce stress. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
+        desc: "Exhale - Full Spectrum VSlow down and make space for a more mindful moment with Exhale, premium Full Spectrum Vijaya Gummies crafted for your everyday wellness ritual. Each gummy contains 600 mg of Vijaya extract in a balanced 1:4 formulation, offering a convenient and enjoyable way to incorporate Vijaya into your routine. With a delicious, easy-to-enjoy format and consistent serving, Exhale is made for moments when you want to pause, reset, and reconnect with yourself. Whether you're unwinding after a long day or creating a calming personal ritual, Exhale fits naturally into your lifestyle. Store in a cool, dry place and use as directed.ijaya Gummies are designed to promote relaxation and reduce stress. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Desire | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        name: "Desire | Full Spectrum Vijaya Gummies | (1:4) 600 mg per Gummy",
         price: "₹8,899",
         original_price: "₹10,999",
         tag: "Sale",
@@ -57,10 +57,10 @@ const rawProducts = [
             "https://drive.google.com/file/d/12bVGXPFYboAFMA3pwZnrC4kkDZPl38JW/view?usp=drive_link",
             // "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "Desire - Full Spectrum Vijaya Gummies are designed to promote desire and enhance mood. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
+        desc: "Desire - Full Spectrum VijaDiscover Desire, premium Full Spectrum Vijaya Gummies created for intimate moments, connection, and personal indulgence. Each gummy contains 600 mg of Vijaya extract in a carefully crafted 1:4 formulation, offering a convenient and enjoyable addition to your wellness routine. With a delicious gummy format and consistent serving, Desire is designed for adults who appreciate a sophisticated approach to self-care and shared experiences. Whether you're setting the mood for a special evening or simply enjoying a moment for yourself, Desire brings a touch of indulgence to your routine. Store in a cool, dry place and use only as directed.a Gummies are designed to promote desire and enhance mood. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Dream | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        name: "Dream | Full Spectrum Vijaya Gummies | (1:4) 600 mg per Gummy",
         price: "₹8,999",
         original_price: "₹10,999",
         tag: "Bestseller",
@@ -71,7 +71,7 @@ const rawProducts = [
         desc: "Dream - Full Spectrum Vijaya Gummies are designed to promote relaxation and reduce stress. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Wave | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        name: "Wave | Full Spectrum Vijaya Gummies | (1:4) 600 mg per Gummy",
         price: "₹8,999",
         original_price: "₹10,999",
         tag: "50% Off",
@@ -79,7 +79,7 @@ const rawProducts = [
             "https://drive.google.com/file/d/10Oxm39NMVA4zM0JadBfoMuHp-Y0EGHXv/view?usp=drive_link",
             // "https://images.unsplash.com/photo-1564466809058-bf4114d55352?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "Wave - Full Spectrum Vijaya Gummies are designed to promote relaxation and reduce stress. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
+        desc: "Wave - Full SpectruMeet Wave, premium Full Spectrum Vijaya Gummies created for a simple, enjoyable addition to your daily routine. Each gummy contains 600 mg of Vijaya extract in a balanced 1:4 formulation, delivering a convenient and consistent serving in a delicious gummy format. Crafted for adults who appreciate quality and thoughtful formulation, Wave brings a modern approach to incorporating Vijaya into your wellness ritual. Whether you're taking a mindful pause during a busy day or enjoying a relaxing evening, Wave fits effortlessly into your lifestyle. Store in a cool, dry place and follow the recommended serving instructions for a consistent experience.m Vijaya Gummies are designed to promote relaxation and reduce stress. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     }
 ];
 
