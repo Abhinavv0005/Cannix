@@ -147,8 +147,8 @@ export default function App() {
             </header>
 
             <div className="banner">
-                <h1>{STORE_NAME}</h1>
-                <p>Up to 50% Off on top electronics and premium accessories. Limited stock. Cop the best deals before they are gone forever.</p>
+                <h1>AYURVEDIC UNIVERSAL MEDICINES</h1>
+                <p>Timeless Ayurvedic wisdom, thoughtfully crafted into trusted wellness solutions for modern life.</p>
             </div>
 
             {/* Added id="shop" so the Shop link scrolls here */}
