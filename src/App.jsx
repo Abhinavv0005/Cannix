@@ -16,70 +16,70 @@ const headerWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComp
 // ==========================================
 const rawProducts = [
     {
-        name: "Premium Wireless Earbuds",
-        price: "₹1,499",
-        original_price: "₹2,999",
+        name: " Lift | Full Spectrum Vijaya Gummies | (1:4) 1000 mg per Gummy",
+        price: "₹8,999",
+        original_price: "₹10,999",
         tag: "Hot Deal",
         images: [
-            "https://drive.google.com/file/d/1evxNUYedefufkGxpaX1Q1M--w0WD3Orc/view?usp=drive_link",
-            "https://drive.google.com/file/d/1Zh8Qid5cUjceEFHC_wsxRNgaNUZFMso2/view?usp=drive_link"
+            "https://drive.google.com/file/d/1n6pPJBQgCmSxIOMvRm5doJbTv-Y6Nhm8/view?usp=drive_link",
+            // "https://drive.google.com/file/d/1Zh8Qid5cUjceEFHC_wsxRNgaNUZFMso2/view?usp=drive_link"
         ],
-        desc: "High-quality sound with noise cancellation. 24-hour battery life."
+        desc: " Lift -  Full Spectrum Vijaya Gummies are carefully made for people who want a modern, guided, and refined way to be healthy. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Smart Fitness Watch",
-        price: "₹2,299",
-        original_price: "₹3,499",
+        name: "Buzz | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        price: "₹8,899",
+        original_price: "₹10,999",
         tag: "Sale",
         images: [
-            "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=500&q=60",
-            "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=60"
+            "https://drive.google.com/file/d/1tZ3iyvIk-aUQaJg7pe8JXYSeAykrrpFu/view?usp=drive_link",
+            // "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "Track your heart rate, steps, and sleep. Water-resistant up to 50m."
+        desc: "Buzz - Full Spectrum Vijaya Gummies are designed to promote energy and focus. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Leather Men's Wallet",
-        price: "₹799",
-        original_price: "₹1,299",
+        name: "Exhale | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        price: "₹8,999",
+        original_price: "₹10,999",
         tag: "Bestseller",
         images: [
-            "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=500&q=60",
-            "https://images.unsplash.com/photo-1628156108159-863a152fb1d0?auto=format&fit=crop&w=500&q=60"
+            "https://drive.google.com/file/d/1ekPtlIBypb4BW1zFZQk26W3Ic2neIgaO/view?usp=drive_link",
+            // "https://images.unsplash.com/photo-1628156108159-863a152fb1d0?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "100% genuine leather with RFID blocking technology."
+        desc: "Exhale - Full Spectrum Vijaya Gummies are designed to promote relaxation and reduce stress. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Smart Fitness Watch",
-        price: "₹2,299",
-        original_price: "₹3,499",
+        name: "Desire | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        price: "₹8,899",
+        original_price: "₹10,999",
         tag: "Sale",
         images: [
-            "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=500&q=60",
-            "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=60"
+            "https://drive.google.com/file/d/12bVGXPFYboAFMA3pwZnrC4kkDZPl38JW/view?usp=drive_link",
+            // "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "Track your heart rate, steps, and sleep. Water-resistant up to 50m."
+        desc: "Desire - Full Spectrum Vijaya Gummies are designed to promote desire and enhance mood. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "Leather Men's Wallet",
-        price: "₹799",
-        original_price: "₹1,299",
+        name: "Dream | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        price: "₹8,999",
+        original_price: "₹10,999",
         tag: "Bestseller",
         images: [
-            "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=500&q=60",
-            "https://images.unsplash.com/photo-1628156108159-863a152fb1d0?auto=format&fit=crop&w=500&q=60"
+            "https://drive.google.com/file/d/1VvxoBQpg0p9J4V4hnnDQ9MxeZd16j5pw/view?usp=drive_link",
+            // "https://images.unsplash.com/photo-1628156108159-863a152fb1d0?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "100% genuine leather with RFID blocking technology."
+        desc: "Dream - Full Spectrum Vijaya Gummies are designed to promote relaxation and reduce stress. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     },
     {
-        name: "HD Action Camera",
-        price: "₹4,999",
-        original_price: "₹7,999",
+        name: "Wave | Full Spectrum Vijaya Gummies | (1:4) 100 mg per Gummy",
+        price: "₹8,999",
+        original_price: "₹10,999",
         tag: "50% Off",
         images: [
-            "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=500&q=60",
-            "https://images.unsplash.com/photo-1564466809058-bf4114d55352?auto=format&fit=crop&w=500&q=60"
+            "https://drive.google.com/file/d/10Oxm39NMVA4zM0JadBfoMuHp-Y0EGHXv/view?usp=drive_link",
+            // "https://images.unsplash.com/photo-1564466809058-bf4114d55352?auto=format&fit=crop&w=500&q=60"
         ],
-        desc: "Capture your adventures in stunning 4K resolution. Includes waterproof case."
+        desc: "Wave - Full Spectrum Vijaya Gummies are designed to promote relaxation and reduce stress. This product is based on Ayurvedic principles and uses modern formulation methods to create a structured edible format with Vijaya extract (Cannabis Extract)."
     }
 ];
 
