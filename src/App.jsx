@@ -6,7 +6,7 @@ import './App.css';
 // ==========================================
 const WHATSAPP_NUMBER = "918218886287"; 
 const STORE_NAME = "AUM";
-const STORE_TAGLINE = "AYUSH MEDICAL";
+const STORE_TAGLINE = "AYURVEDIC UNIVERSAL MEDICINES";
 const NOTIFICATION_TEXT = "🔥 HYPE DROP: GET 10% OFF ALL PREPAID ORDERS! ⚡ FREE SHIPPING OVER ₹1699 🚀 SALE ENDS SOON!";
 const HEADER_SUPPORT_MESSAGE = "Hello, I need some help with your store.";
 const headerWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(HEADER_SUPPORT_MESSAGE)}`;
