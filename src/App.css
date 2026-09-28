@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Righteous&display=swap');
 
 /* Base Styling */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Righteous&display=swap');
-
-/* Base Styling */
 body { 
     font-family: 'Outfit', sans-serif; 
     margin: 0; 
@@ -389,6 +386,7 @@ body {
     overflow: hidden;
     z-index: 1;
     border: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0; /* Ensures button doesn't shrink when text overflows */
 }
 .buy-btn::before {
     content: '';
@@ -431,6 +429,8 @@ body {
     opacity: 1;
     visibility: visible;
 }
+
+/* Updated Modal Content for Scrolling Description */
 .modal-content {
     background: rgba(10, 10, 10, 0.95); 
     border: 1px solid rgba(212, 175, 55, 0.2);
@@ -445,7 +445,7 @@ body {
     display: flex; 
     flex-direction: column;
     max-height: 90vh; 
-    overflow-y: auto;
+    overflow: hidden; /* Prevent the whole modal from scrolling past screen */
 }
 .modal-overlay.active .modal-content {
     transform: translateY(0) scale(1);
@@ -480,6 +480,7 @@ body {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+    flex-shrink: 0; /* Keep image from shrinking */
 }
 .modal-slider {
     display: flex;
@@ -495,23 +496,45 @@ body {
     scroll-snap-align: center;
     width: 100%; 
     height: auto; 
-    max-height: 50vh;
+    max-height: 40vh; /* Scaled down slightly to fit more text */
     object-fit: contain;
     display: block;
 }
 
 .modal-content .product-tag { top: 15px; left: 15px; }
-.modal-title { font-size: clamp(22px, 4vw, 28px); font-weight: 600; margin: 0 0 10px 0; color: #fff; letter-spacing: 0.5px; }
+.modal-title { font-size: clamp(22px, 4vw, 28px); font-weight: 600; margin: 0 0 10px 0; color: #fff; letter-spacing: 0.5px; flex-shrink: 0;}
 
-/* Show full text in the modal */
+/* Updated price container to not shrink */
+.modal-content .price-container {
+    flex-shrink: 0;
+}
+
+/* Allow ONLY the description text to scroll inside the modal */
 .modal-desc { 
     font-size: clamp(14px, 2.5vw, 16px); 
     color: #a1a1aa; 
     line-height: 1.7; 
-    margin-bottom: 30px; 
+    margin-bottom: 20px; 
     font-weight: 300; 
     display: block;
-    overflow: visible;
+    overflow-y: auto; /* Scroll enabled here */
+    flex-grow: 1; /* Take up remaining space */
+    padding-right: 10px; /* Space for scrollbar */
+}
+/* Style the modal description scrollbar */
+.modal-desc::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-desc::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 10px;
+}
+.modal-desc::-webkit-scrollbar-thumb {
+    background: rgba(212, 175, 55, 0.4); 
+    border-radius: 10px;
+}
+.modal-desc::-webkit-scrollbar-thumb:hover {
+    background: rgba(212, 175, 55, 0.8); 
 }
 
 /* Colorful Footer Gradient */
