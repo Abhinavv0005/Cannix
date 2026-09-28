@@ -296,7 +296,7 @@ body {
     scroll-snap-align: center;
     width: 100%;
     height: clamp(220px, 30vw, 280px);
-    object-fit: cover;
+    object-fit: contain;
     opacity: 0.95;
     transition: opacity 0.3s ease;
 }
@@ -354,10 +354,15 @@ body {
 .product-desc { 
     font-size: clamp(13px, 2vw, 15px); 
     color: #a1a1aa; 
-    line-height: 1.7; 
+    line-height: 1.5; 
     margin-bottom: 25px; 
     flex-grow: 1;
     font-weight: 300;
+    /* Truncate text to 3 lines for main grid */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .buy-btn { 
@@ -487,12 +492,22 @@ body {
     scroll-snap-align: center;
     width: 100%; 
     height: clamp(250px, 40vw, 350px); 
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .modal-content .product-tag { top: 15px; left: 15px; }
 .modal-title { font-size: clamp(22px, 4vw, 28px); font-weight: 600; margin: 0 0 10px 0; color: #fff; letter-spacing: 0.5px; }
-.modal-desc { font-size: clamp(14px, 2.5vw, 16px); color: #a1a1aa; line-height: 1.7; margin-bottom: 30px; font-weight: 300; }
+
+/* Show full text in the modal */
+.modal-desc { 
+    font-size: clamp(14px, 2.5vw, 16px); 
+    color: #a1a1aa; 
+    line-height: 1.7; 
+    margin-bottom: 30px; 
+    font-weight: 300; 
+    display: block;
+    overflow: visible;
+}
 
 /* Colorful Footer Gradient */
 .site-footer { 
